@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/dist/mdb5/standard/core.min.css">
+    <link rel='stylesheet' id='roboto-subset.css-css'  href='https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/mdb5/fonts/roboto-subset.css?ver=3.9.0-update.5' type='text/css' media='all' />
+  <meta charset="UTF-8">
+  <title>Weather Application</title>
+  <style>
+    /* CSS styles go here */
+  </style>
+</head>
+<body>
+    <section class="pb-4">
+        <div class="border rounded-5">
+          <H1><center> Weather Report </center></H1>
+          <section class="w-100 py-5 px-4" style="background-color: #4B515D; border-radius: .5rem .5rem 0 0;">
+            
+            <div class="row d-flex justify-content-center py-5">
+              <div class="col-md-8 col-lg-6 col-xl-5">
+      
+                <div class="card" style="color: #4B515D; border-radius: 35px;">
+                  <div class="card-body p-4">
+      
+                    <div class="d-flex">
+                      <h6 class="flex-grow-1"><%=city %></h6>
+                      <h6><%=time%>:<%=time1%> </h6>
+                    </div>
+      
+                    <div class="d-flex flex-column text-center mt-5 mb-4">
+                      <h6 class="display-4 mb-0 font-weight-bold" style="color: #1C2331;"> <%=temp %> </h6>
+                      <span class="small" style="color: #868B94"><%=desc %></span>
+                    </div>
+      
+                    <div class="d-flex align-items-center">
+                      <div class="flex-grow-1" style="font-size: 1rem;">
+                        <div><i class="fas fa-wind fa-fw" style="color: #868B94;"></i> <span class="ms-1"> <%=windSpeed %> km/h </span>
+                        </div>
+                        <div><i class="fas fa-tint fa-fw" style="color: #868B94;"></i> <span class="ms-1"> <%=humidity %>% </span></div>
+                      </div>
+                      <div>
+                        <img src="<%=iconURL %>"
+                          width="100px">
+                      </div>
+                    </div>
+      
+                  </div>
+                </div>
+      
+              </div>
+            </div>
+            <form action="/FavouritesAdded" method="post">
+              <input type="hidden" name="city" value= <%= city %>>
+              <center><button type="submit">Add to my Favouries</button></center> 
+            </form>
+          </section>
+</body>
+</html>

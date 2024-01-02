@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/dist/mdb5/standard/core.min.css">
+    <link rel='stylesheet' id='roboto-subset.css-css'  href='https://mdbcdn.b-cdn.net/wp-content/themes/mdbootstrap4/docs-app/css/mdb5/fonts/roboto-subset.css?ver=3.9.0-update.5' type='text/css' media='all' />
+  <meta charset="UTF-8">
+  <title>Weather Application</title>
+  <style>
+    /* CSS styles go here */
+  </style>
+</head>
+<body>
+    <%- include("index.ejs") %>
+    <% if(flag == 'True'){%>
+    
+            <section class="py-4 px-4">
+              <h2>Saved Weather Cities</h2>
+              <div class="row">
+                    <div class="col-md-4">
+                          <div class="card">
+                              <div class="card-body">
+                                  <p>City: <%= savedcity1 %>
+                                  <p>Temperature: <%= savedtemp1 %>°C</p>
+                                  <p>Description: <%= saveddesc1 %></p>
+                              </div>
+                          </div>
+                      </div>
+              </div>
+          </section>
+          <section class="py-4 px-4">
+            <h2>Saved Weather Cities</h2>
+            <div class="row">
+                  <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <p>City: <%= savedcity2 %>
+                                <p>Temperature: <%= savedtemp2 %>°C</p>
+                                <p>Description: <%= saveddesc2 %></p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <%}%>
+        <% if(flag == 'True'){%>
+    
+            <section class="py-4 px-4">
+              <h2>Saved Weather Cities</h2>
+              <div class="row">
+                    <div class="col-md-4">
+                          <div class="card">
+                              <div class="card-body">
+                                  <p>City: <%= savedcity %>
+                                  <p>Temperature: <%= savedtemp %>°C</p>
+                                  <p>Description: <%= saveddesc %></p>
+                              </div>
+                          </div>
+                      </div>
+              </div>
+          </section>
+        <%}%>
+</body>
+</html>
